@@ -1,16 +1,19 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import Plyr from 'react-plyr';
+import logo from '../images/Koin_logo2018_white.png'
+import '../assets/css/vimeo.css'
 
 const Header = (props) => (
     <header id="header" style={props.timeout ? {display: 'none'} : {}}>
-        <div className="logo">
-            <span className="icon fa-diamond"></span>
+        <div className="logo">            
+            <img src={logo} className="logo" alt="koinoia davis logo"></img>
         </div>
         <div className="content">
             <div className="inner">
-                <h1>Dimension</h1>
-                <p>A fully responsive site template designed by <a href="https://html5up.net">HTML5 UP</a> and released<br />
-                for free under the <a href="https://html5up.net/license">Creative Commons</a> license.</p>
+                <h1>New Student Welcome Night</h1>
+                <div class='embed-container'><iframe src='https://player.vimeo.com/video/98941401' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></div>
+                <p>Check out the trailer!</p>            
             </div>
         </div>
         <nav>

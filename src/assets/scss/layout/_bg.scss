@@ -46,10 +46,12 @@
 				'transform #{_duration(article)} ease-in-out',
 				'filter #{_duration(article)} ease-in-out'
 			));
-			background-image:		url('../../images/bg.jpg');
+			background-image:		url('../../images/background.jpg');
 			background-position:	center;
 			background-size:		cover;
 			background-repeat:		no-repeat;
+			filter: blur(2px);
+  			-webkit-filter: blur(2px);
 			z-index: 1;
 		}
 
