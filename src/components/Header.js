@@ -1,6 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Plyr from 'react-plyr';
 import logo from '../images/Koin_logo2018_white.png'
 import '../assets/css/vimeo.css'
 
