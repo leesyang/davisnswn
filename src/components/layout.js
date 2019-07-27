@@ -41,8 +41,8 @@ const Layout = ({ children, location }) => {
           <Helmet
             title={data.site.siteMetadata.title}
             meta={[
-              { name: 'description', content: 'Sample' },
-              { name: 'keywords', content: 'sample, something' },
+              { name: 'description', content: 'New Student Welcome Night' },
+              { name: 'keywords', content: 'koinonia, christian fellowship, christian, uc davis, koin, gracepoint, new student welcome night, nswn, davis nswn' },
             ]}
           >
             <html lang="en" />

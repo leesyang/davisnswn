@@ -1,9 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import pic01 from '../images/pic01.jpg'
-import pic02 from '../images/pic02.jpg'
-import pic03 from '../images/pic03.jpg'
+import watertower from '../images/watertower.jpg'
+import nswngroup from '../images/nswngroup.jpg'
+import koingroup from '../images/koingroup.jpg'
 
 class Main extends React.Component {
   render() {
@@ -15,24 +15,27 @@ class Main extends React.Component {
 
         <article id="intro" className={`${this.props.article === 'intro' ? 'active' : ''} ${this.props.articleTimeout ? 'timeout' : ''}`} style={{display:'none'}}>
           <h2 className="major">Intro</h2>
-          <span className="image main"><img src={pic01} alt="" /></span>
-          <p>Aenean ornare velit lacus, ac varius enim ullamcorper eu. Proin aliquam facilisis ante interdum congue. Integer mollis, nisl amet convallis, porttitor magna ullamcorper, amet egestas mauris. Ut magna finibus nisi nec lacinia. Nam maximus erat id euismod egestas. By the way, check out my <a href="#work">awesome work</a>.</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tristique libero eu nibh porttitor fermentum. Nullam venenatis erat id vehicula viverra. Nunc ultrices eros ut ultricies condimentum. Mauris risus lacus, blandit sit amet venenatis non, bibendum vitae dolor. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In non lorem sit amet elit placerat maximus. Pellentesque aliquam maximus risus, vel sed vehicula.</p>
+          <span className="image main"><img src={watertower} alt="water tower" /></span>
+          <p>Welcome to UC Davis! Your college years will be one of the most important times in your life.
+          Some people mistakenly think it's just a time to get a good career. Work hard, earn the grades, get out and get on with the career of your dreams.
+          But don't be mistaken, college is about so much more than just a job in the future.
+          It is a place to actually find who you are. Ask deeper questions about life and meaning and purpose.
+          It's a time to make life long friends. And life long memories.
+          How your college years go can affect the rest of your life.</p>          
           {close}
         </article>
 
-        <article id="work" className={`${this.props.article === 'work' ? 'active' : ''} ${this.props.articleTimeout ? 'timeout' : ''}`} style={{display:'none'}}>
-          <h2 className="major">Work</h2>
-          <span className="image main"><img src={pic02} alt="" /></span>
-          <p>Adipiscing magna sed dolor elit. Praesent eleifend dignissim arcu, at eleifend sapien imperdiet ac. Aliquam erat volutpat. Praesent urna nisi, fringila lorem et vehicula lacinia quam. Integer sollicitudin mauris nec lorem luctus ultrices.</p>
-          <p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus pharetra. Pellentesque condimentum sem. In efficitur ligula tate urna. Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus amet feugiat tempus.</p>
-          {close}
-        </article>
-
-        <article id="about" className={`${this.props.article === 'about' ? 'active' : ''} ${this.props.articleTimeout ? 'timeout' : ''}`} style={{display:'none'}}>
+        <article id="work" className={`${this.props.article === 'about' ? 'active' : ''} ${this.props.articleTimeout ? 'timeout' : ''}`} style={{display:'none'}}>
           <h2 className="major">About</h2>
-          <span className="image main"><img src={pic03} alt="" /></span>
-          <p>Lorem ipsum dolor sit amet, consectetur et adipiscing elit. Praesent eleifend dignissim arcu, at eleifend sapien imperdiet ac. Aliquam erat volutpat. Praesent urna nisi, fringila lorem et vehicula lacinia quam. Integer sollicitudin mauris nec lorem luctus ultrices. Aliquam libero et malesuada fames ac ante ipsum primis in faucibus. Cras viverra ligula sit amet ex mollis mattis lorem ipsum dolor sit amet.</p>
+          <span className="image main"><img src={nswngroup} alt="people at nswn" /></span>
+          <p>New Student Welcome Night is the go-to event on the UC Davis campus. With videos, a skit, a thought-provoking talk, and free Korean BBQ (yes—free!), it’s an unforgettable night to start off the new school year. Invite your friends and hope to see you there! NSWN is sponsored by Koinonia Christian Fellowship, a group that meets weekly on campus.</p>
+          {close}
+        </article>
+
+        <article id="about" className={`${this.props.article === 'koin' ? 'active' : ''} ${this.props.articleTimeout ? 'timeout' : ''}`} style={{display:'none'}}>
+          <h2 className="major">Koinonia</h2>
+          <span className="image main"><img src={koingroup} alt="koinonia group photo" /></span>
+          <p>What is Koinonia? It is the greek word for "fellowship" from the passing in Acts 2:42. For many of us, college was a transformative time: Jesus’ all-consuming call grabbed a hold of our hearts as we experienced the richness of life within a biblical, counter-cultural Christian community. It’s an experience and a vision we want to pass on to others—an Acts 2 church in every college town. And so, we focus on college ministry, plant churches in college towns, and encourage every one of our members to live in loving, sacrificial service and ministry. At Koinonia Davis, you'll find a space to seek Jesus seriously, make life-long friendships, and discover your life's purpose according to God's Word. Come check us out! <span><a href="http://www.koinoniadavis.org/">@Koinonia Davis</a></span></p>          
           {close}
         </article>
 
