@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import logo from '../images/Koin_logo2018_white.png'
+import nswnFlyer from '../images/nswn2019.png'
 import '../assets/css/vimeo.css'
 
 const Header = (props) => (
@@ -10,8 +11,8 @@ const Header = (props) => (
         </div>
         <div className="content">
             <div className="inner">
-                <h1>New Student Welcome Night</h1>
-                <div class='embed-container'><iframe src='https://player.vimeo.com/video/98941401' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></div>
+                <h1>Coming soon...</h1>
+                <img src={nswnFlyer}></img>
                 <p>Check out the trailer!</p>            
             </div>
         </div>
