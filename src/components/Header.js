@@ -6,7 +6,7 @@ import '../assets/css/vimeo.css'
 const Header = (props) => (
     <header id="header" style={props.timeout ? {display: 'none'} : {}}>
         <div className="logo">            
-            <img src={logo} className="logo" alt="koinoia davis logo"></img>
+            <img src={logo} className="logo" alt="koinoia davis nswn logo"></img>
         </div>
         <div className="content">
             <div className="inner">
