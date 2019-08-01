@@ -12,7 +12,7 @@ const Header = (props) => (
         <div className="content">
             <div className="inner">
                 <h1>Coming soon...</h1>
-                <img src={nswnFlyer}></img>
+                <img src={nswnFlyer} className="banner" alt="koinonia davis nswn banner"></img>
                 <p>Check out the trailer!</p>            
             </div>
         </div>

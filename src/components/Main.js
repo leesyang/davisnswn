@@ -1,11 +1,32 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { getFirebase } from '../../gatsby-firebase.js'
 
 import watertower from '../images/watertower.jpg'
 import nswngroup from '../images/nswngroup.jpg'
 import koingroup from '../images/koingroup.jpg'
 
 class Main extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      firebase: null
+    };
+  }  
+
+  componentDidMount() {
+    const lazyApp = import('firebase/app')
+    const lazyDatabase = import('firebase/database')
+
+    Promise.all([lazyApp, lazyDatabase]).then(([firebase]) => {
+      const database = getFirebase(firebase).database()
+      // do something with `database` here,
+      // or store it as an instance variable or in state
+      // to do stuff with it later
+      this.setState({ firebase: database });
+    })
+  }
+
   render() {
 
     let close = <div className="close" onClick={() => {this.props.onCloseArticle()}}></div>
