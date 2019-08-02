@@ -88,6 +88,7 @@ class Main extends React.Component {
           <ul className="icons">
             <li><a href="http://www.facebook.com/KoinoniaDavis/" className="icon fa-facebook"><span className="label">Facebook</span></a></li>
             <li><a href="https://www.instragram.com/koinoniadavis" className="icon fa-instagram"><span className="label">Instagram</span></a></li>            
+            <li><a href="https://www.youtube.com/channel/UCZkOrwCQ253Ra308msG10Ag" className="icon fa-youtube"><span className="label">Youtube</span></a></li>
           </ul>
           {close}
         </article>
