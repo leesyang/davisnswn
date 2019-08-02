@@ -27,6 +27,11 @@ class Main extends React.Component {
     })
   }
 
+  handleSubmit(e) {
+    e.preventDefault();
+    console.log('Hello');
+  }
+
   render() {
 
     let close = <div className="close" onClick={() => {this.props.onCloseArticle()}}></div>
@@ -41,15 +46,15 @@ class Main extends React.Component {
           Some people mistakenly think it's just a time to get a good career. Work hard, earn the grades, get out and get on with the career of your dreams.
           But don't be mistaken, college is about so much more than just a job in the future.
           It is a place to actually find who you are. Ask deeper questions about life and meaning and purpose.
-          It's a time to make life long friends. And life long memories.
-          How your college years go can affect the rest of your life.</p>          
+          It's a time to make life long friends and life long memories.
+          How your college years go can affect the rest of your life. Come check out Koinonia Davis and go on a journey with us.</p>          
           {close}
         </article>
 
         <article id="work" className={`${this.props.article === 'about' ? 'active' : ''} ${this.props.articleTimeout ? 'timeout' : ''}`} style={{display:'none'}}>
           <h2 className="major">About</h2>
           <span className="image main"><img src={nswngroup} alt="people at nswn" /></span>
-          <p>New Student Welcome Night is the go-to event on the UC Davis campus. With videos, a skit, a thought-provoking talk, and free Korean BBQ (yes—free!), it’s an unforgettable night to start off the new school year. Invite your friends and hope to see you there! NSWN is sponsored by Koinonia Christian Fellowship, a group that meets weekly on campus.</p>
+          <p>New Student Welcome Night is the go-to event on the UC Davis campus. With videos, a skit, a thought-provoking talk, and free Korean BBQ (yes—free!), it’s an unforgettable night to start off the new school year. Invite your friends and hope to see you there! NSWN is sponsored by Koinonia Davis Christian Fellowship, a group that meets weekly on campus.</p>
           {close}
         </article>
 
@@ -62,7 +67,7 @@ class Main extends React.Component {
 
         <article id="contact" className={`${this.props.article === 'contact' ? 'active' : ''} ${this.props.articleTimeout ? 'timeout' : ''}`} style={{display:'none'}}>
           <h2 className="major">Contact</h2>
-          <form method="post" action="#">
+          <form onSubmit={this.handleSubmit}>
             <div className="field half first">
               <label htmlFor="name">Name</label>
               <input type="text" name="name" id="name" />
@@ -81,10 +86,8 @@ class Main extends React.Component {
             </ul>
           </form>
           <ul className="icons">
-            <li><a href="#" className="icon fa-twitter"><span className="label">Twitter</span></a></li>
-            <li><a href="#" className="icon fa-facebook"><span className="label">Facebook</span></a></li>
-            <li><a href="#" className="icon fa-instagram"><span className="label">Instagram</span></a></li>
-            <li><a href="#" className="icon fa-github"><span className="label">GitHub</span></a></li>
+            <li><a href="http://www.facebook.com/KoinoniaDavis/" className="icon fa-facebook"><span className="label">Facebook</span></a></li>
+            <li><a href="https://www.instragram.com/koinoniadavis" className="icon fa-instagram"><span className="label">Instagram</span></a></li>            
           </ul>
           {close}
         </article>
