@@ -29,7 +29,7 @@ class Main extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    console.log('Hello');
+    //var db = this.state.firebase;
   }
 
   render() {
@@ -67,7 +67,7 @@ class Main extends React.Component {
 
         <article id="contact" className={`${this.props.article === 'contact' ? 'active' : ''} ${this.props.articleTimeout ? 'timeout' : ''}`} style={{display:'none'}}>
           <h2 className="major">Contact</h2>
-          <form onSubmit={this.handleSubmit}>
+          <form onSubmit={this.handleSubmit.bind(this)}>
             <div className="field half first">
               <label htmlFor="name">Name</label>
               <input type="text" name="name" id="name" />
@@ -87,7 +87,7 @@ class Main extends React.Component {
           </form>
           <ul className="icons">
             <li><a href="http://www.facebook.com/KoinoniaDavis/" className="icon fa-facebook"><span className="label">Facebook</span></a></li>
-            <li><a href="https://www.instragram.com/koinoniadavis" className="icon fa-instagram"><span className="label">Instagram</span></a></li>            
+            <li><a href="https://www.instagram.com/koinoniadavisfood/" className="icon fa-instagram"><span className="label">Instagram</span></a></li>            
             <li><a href="https://www.youtube.com/channel/UCZkOrwCQ253Ra308msG10Ag" className="icon fa-youtube"><span className="label">Youtube</span></a></li>
           </ul>
           {close}
