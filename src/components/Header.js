@@ -12,7 +12,7 @@ const Header = (props) => (
         <div className="content">
             <div className="inner">
                 <h1>Coming soon...</h1>
-                <img src={nswnFlyer} className="banner" alt="koinonia davis nswn banner"></img>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/LSRbIFKjMSk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 <p>Check out the trailer!</p>            
             </div>
         </div>
