@@ -10,7 +10,10 @@ class Main extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      firebase: null
+      firebase: null,
+      name: '',
+      email: '',
+      message: ''
     };
   }  
 
@@ -29,7 +32,31 @@ class Main extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    //var db = this.state.firebase;
+    var db = this.state.firebase;
+    db.ref(Date.now()).set({
+      name: this.state.name,
+      email: this.state.email,
+      comment: this.state.message
+    });
+
+    return this.props.onCloseArticle();
+  }
+
+  handleInputChange(e) {
+    const target = e.target
+    const value = target.value
+    const name = target.name
+    this.setState({
+      [name]: value,
+    })
+  }
+
+  handleReset(e) {
+    this.setState({
+      name: '',
+      email: '',
+      message: ''
+    })
   }
 
   render() {
@@ -70,24 +97,25 @@ class Main extends React.Component {
           <form onSubmit={this.handleSubmit.bind(this)}>
             <div className="field half first">
               <label htmlFor="name">Name</label>
-              <input type="text" name="name" id="name" />
+              <input type="text" name="name" id="name" value={this.state.name} onChange={this.handleInputChange.bind(this)}/>
             </div>
             <div className="field half">
               <label htmlFor="email">Email</label>
-              <input type="text" name="email" id="email" />
+              <input type="text" name="email" id="email" value={this.state.email} onChange={this.handleInputChange.bind(this)}/>
             </div>
             <div className="field">
               <label htmlFor="message">Message</label>
-              <textarea name="message" id="message" rows="4"></textarea>
+              <textarea name="message" id="message" rows="4" value={this.state.message} onChange={this.handleInputChange.bind(this)}></textarea>
             </div>
             <ul className="actions">
               <li><input type="submit" value="Send Message" className="special" /></li>
-              <li><input type="reset" value="Reset" /></li>
+              <li><input type="reset" value="Reset" onClick={this.handleReset.bind(this)} /></li>
             </ul>
           </form>
           <ul className="icons">
             <li><a href="http://www.facebook.com/KoinoniaDavis/" className="icon fa-facebook"><span className="label">Facebook</span></a></li>
-            <li><a href="https://www.instagram.com/koinoniadavisfood/" className="icon fa-instagram"><span className="label">Instagram</span></a></li>            
+            <li><a href="https://www.instagram.com/koinoniadavisfood/" className="icon fa-instagram"><span className="label">Instagram Food</span></a></li>
+            <li><a href="https://www.instagram.com/koinoniadavisoutings/" className="icon fa-instagram"><span className="label">Instagram Outings</span></a></li>            
             <li><a href="https://www.youtube.com/channel/UCZkOrwCQ253Ra308msG10Ag" className="icon fa-youtube"><span className="label">Youtube</span></a></li>
           </ul>
           {close}

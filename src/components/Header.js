@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import logo from '../images/Koin_logo2018_white.png'
 import nswnFlyer from '../images/nswn2019.png'
-import '../assets/css/vimeo.css'
+import '../assets/css/video-responsive.css'
 
 const Header = (props) => (
     <header id="header" style={props.timeout ? {display: 'none'} : {}}>
@@ -11,8 +11,10 @@ const Header = (props) => (
         </div>
         <div className="content">
             <div className="inner">
-                <h1>Coming soon...</h1>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/LSRbIFKjMSk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <h2>Sept. 25, 7PM @ ARC Ballroom</h2>
+                <div className='embed-container'>
+                    <iframe src='https://www.youtube.com/embed/LSRbIFKjMSk'></iframe>
+                </div>
                 <p>Check out the trailer!</p>            
             </div>
         </div>
