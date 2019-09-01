@@ -39,6 +39,8 @@ class Main extends React.Component {
       comment: this.state.message
     });
 
+    this.handleReset();
+    
     return this.props.onCloseArticle();
   }
 
